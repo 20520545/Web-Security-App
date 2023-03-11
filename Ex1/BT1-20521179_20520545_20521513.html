@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Main form</title>
+
+
+    </head>
+    <body>
+        <h1>Main form</h1>
+        <form action="xuly.php" method="POST">
+            <table cellpadding="0" cellspacing="0" border="1">
+                <tr>
+                    <td>
+                        Username: 
+                    </td>
+                    <td>
+                        <input class="username" type="text" name="txtUsername" size="50" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password: 
+                    </td>
+                    <td>
+                        <input class="password" type="password" name="txtPassword" size="50" />
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Đăng nhập" />
+            <a href='dangky.html' title='Đăng ký'>Đăng ký</a>
+        </form>
+
+        <script>
+            var username = document.querySelector(".username")
+            var password = document.querySelector(".password")
+            var form = document.querySelector("form")
+            
+            form.addEventListener("submit", function(e) {
+                e.preventDefault()
+                let check = false;
+                // check username/password is null?
+                if (username.value =='')
+                {
+                    username.value = "This field must be filled in!"
+                    check = true;
+                }
+
+                if (password.value == '')
+                {
+                    password.setAttribute("type", "text")
+                    password.value = "This field must be filled in!"
+                }
+
+                if (!check)
+                {
+                    // check username
+                    const username_regex = /^[a-z0-9_.]+$/
+                    if (!username_regex.test(username.value))
+                    {
+                        username.value = "Username không chứa khoảng trắng, không chứa kí tự đặc biệt trừ - và _"
+                    }
+                }
+                
+
+            })
+        </script>
+    </body>
+</html>
