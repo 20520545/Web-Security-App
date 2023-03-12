@@ -18,7 +18,7 @@ form.addEventListener("submit", function(e)
     else if (!check)
     {
         // check username
-        const username_regex = /^[a-zA-Z0-9_.]+$/
+        const username_regex = /^[a-zA-Z0-9._-]+$/
         if (!username_regex.test(username.value))
         {
             alert("Username must not contain special characters beside - and _");

@@ -7,27 +7,16 @@
     </head>
     <body>
         <h1></h1>
-        <form action="action2.php" method="POST">
-            <table cellpadding="0" cellspacing="0" border="1">
-                <tr>
-                    <td>
-                        Username: 
-                    </td>
-                    <td>
-                        <input type="text" name="txtUsername" id="Username"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Password:
-                    </td>
-                    <td>
-                        <input type="password" name="txtPassword"/>
-                    </td>
-                </tr>
-            </table>
-            <input type="submit" value="Sign up" />
-            <a href='register.html' title='Quay lại trang đăng nhập'>Quay lại trang đăng nhập</a>
-        </form>
+        <body>
+            <form action="./action.php"  method="POST">
+                <fieldset>
+                <h1 >Register Me!</h1>
+                <input class="username" type="text" name="txtUsername" placeholder="Username"/><br><br>
+                <input class="password" type="password" name="txtPassword" placeholder="Password"><br><br>
+                <input type="submit" id="btnSubmit" value="Sign up"><br><br>
+                <a href='login.html'>Go to Login</a>
+                </fieldset>
+            </form>
+        </body>
     </body>
 </html>
