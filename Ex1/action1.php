@@ -1,29 +1,30 @@
 
 <?php
  
-    // Nếu không bấm nút submit thì không xử lý
+    // Check whether submit button is clicked?
     if (!isset($_POST['btn-submit'])){
         die('');
     }
     else {
         echo "Submited!\n";
     }
-    //Nhúng file kết nối với database
+
+    //Embedded file connect to database
     include('connect.php');
           
           
-    //Lấy dữ liệu từ file register.html
+    //receive data from file register.html
     $username   = $_POST['txtUsername'];
     $password   = $_POST['txtPassword'];
     
-    //Kiểm tra người dùng đã nhập liệu đầy đủ chưa
+    //check whether the fields are filled in?
     if (!empty($username) && !empty($password)) 
     {
-        //mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
-        //Lưu thông tin thành viên vào bảng
+       
+        // save user's info into table 
         $sql = "INSERT INTO `users` (`username`, `password`) VALUES('$username', '$password') ";
 
-        
+        // Inform save data into database 
         if ($conn->query($sql)===TRUE) {
             echo "Save data successfully!\n";
         } else {
