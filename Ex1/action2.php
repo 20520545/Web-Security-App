@@ -1,14 +1,5 @@
 
 <?php
- 
-    // Check whether submit button is clicked?
-    if (!isset($_POST['btn-submit'])){
-        die('');
-    }
-    else {
-        echo "Submited!\n";
-    }
-
     //Embedded file connect to database
     include('connect.php');
           
