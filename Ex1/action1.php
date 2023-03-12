@@ -9,7 +9,7 @@
         echo "Submited!\n";
     }
     //Nhúng file kết nối với database
-    include('./db/connect.php');
+    include('connect.php');
           
           
     //Lấy dữ liệu từ file register.html
