@@ -1,11 +1,12 @@
 <?php
-    $host = 'localhost'; //Tên server, nếu dùng hosting free thì cần thay đổi
-    $username = 'root'; //Tên sử dụng Database
-    $password = '';//Mật khẩu của tên sử dụng Database
-    $dbname = 'account'; //Đây là tên của Database
+    $host = 'localhost'; //server name
+    $username = 'root'; 
+    $password = '';
+    $dbname = 'account'; //database name
    
     $conn = new mysqli($host, $username, $password, $dbname);
-
+    
+    // check connection
     if ($conn->connect_error){
         die("Connect database unsuccessfully!\n".$conn->connect_error);
     }
