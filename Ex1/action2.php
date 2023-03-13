@@ -4,7 +4,7 @@
     include('connect.php');
           
           
-    //receive data from file register.html
+    //receive data from file login.html
     $username   = $_POST['txtUsername'];
     $password   = $_POST['txtPassword'];
     
