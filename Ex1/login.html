@@ -2,21 +2,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Login me!</title>
+        <title>Login me!</title> <!-- Tiêu đề trang -->
         <link rel="stylesheet" href="style.css"></link>
 
 
     </head>
     <body>
         <form action="./action2.php"  method="POST">
-            <fieldset>
-            <h1 >Login Me!</h1>
-            <input class="username" type="text" name="txtUsername" placeholder="Username"/><br><br>
-            <input class="password" type="password" name="txtPassword" placeholder="Password"><br><br>
-            <input type="submit" id="btnSubmit" name="btn-submit" value="Sign in"><br><br>
-            <a href='register.html'>New here?</a>
+            <fieldset> <!-- Nhóm các thành phần có liên quan với nhau trong form -->
+            <h1 >Login Me!</h1> <!-- Tiêu đề form -->
+            <input class="username" type="text" name="txtUsername" placeholder="Username"/><br><br> <!-- Tạo ô nhập tài khoản-->
+            <input class="password" type="password" name="txtPassword" placeholder="Password"><br><br> <!-- Tạo ô nhập mật khẩu-->
+            <input type="submit" id="btnSubmit" name="btn-submit" value="Sign in"><br><br> <!-- Tạo nút submit -->
+            <a href='register.html'>New here?</a> <!-- link chuyển hướng đến trang đăng ký -->
             </fieldset>
         </form>
     </body>
-    <script src="main.js"></script>
+    <script src="main.js"></script> <!-- File javascript thực hiện nhiệm vụ kiểm tra đầu vào form -->
 </html>
