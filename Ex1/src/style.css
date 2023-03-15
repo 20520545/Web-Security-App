@@ -13,3 +13,12 @@ form{
 fieldset{
     width: 400px;
 }
+input[type=submit]
+{
+    text-size-adjust: 100px;
+    background-color: white;
+}
+input[type=submit]:hover
+{
+    background-color: yellow;
+}
