@@ -43,7 +43,7 @@
         {
             echo "<h1>Registered successfully!</h1>";
             sleep(3);
-            echo("<meta http-equiv=\"Refresh\" content=\"2; url=index.php\">");
+            echo("<meta http-equiv=\"Refresh\" content=\"2; url=login.html\">");
         } 
     }
     catch(Exception $e)
