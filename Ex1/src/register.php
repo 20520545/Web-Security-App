@@ -1,5 +1,4 @@
 <?php
-    //Embedded file connect to database
     $host = 'mysql_db'; 
     $username = 'root'; 
     $password = 'root';
@@ -32,10 +31,17 @@
     } 
     try
     {
-        $sql = "INSERT INTO users (username, password) VALUES ($username, $password)";
-        if ($conn->query($sql)===TRUE) 
+        $query = "SELECT * FROM users WHERE username = '$username'";
+        $result = mysqli_query($conn, $query);
+        if (mysqli_num_rows($result) > 0) 
         {
-            echo "Registered successfully!\n";
+            echo "<h1>User already exists!</h1>";
+            die();
+        }
+        $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+        if ($conn->query($query)===TRUE) 
+        {
+            echo "<h1>Registered successfully!</h1>";
             sleep(3);
             echo("<meta http-equiv=\"Refresh\" content=\"2; url=index.php\">");
         } 

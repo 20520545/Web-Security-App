@@ -30,7 +30,7 @@
         } 
         else
         {
-            echo ("<h1>Wrong password, please enter again!</h1>");
+            echo ("<h1>Username or password is not correct, please enter again!</h1>");
             sleep(3);
             echo("<meta http-equiv=\"Refresh\" content=\"2; url=index.php\">");
         }
@@ -42,5 +42,4 @@
     }
     else
     die();
-    
 ?>
